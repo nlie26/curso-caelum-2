@@ -1,12 +1,22 @@
 var botaoLayout = document.querySelector("#btnMudaLayout")
 
 function alteraNome() { 
-    if (botaoLayout.textContent == "Linhas") {
-        botaoLayout.textContent = "Blocos"
+    if (botaoLayout.textContent == "Blocos") {
+        botaoLayout.textContent = "Linhas"
     }
     else {
-        botaoLayout.textContent = "Linhas"
+        botaoLayout.textContent = "Blocos"
     }
 }
 
-botaoLayout.onclick = alteraNome;
+
+var mural = document.querySelector(".mural");
+
+function mudaLayout() {
+    mural.classList.toggle("mural--linha")
+}
+
+botaoLayout.addEventListener ('click', function() {
+    mudaLayout()
+    alteraNome()
+})
