@@ -11,6 +11,11 @@
 	transition: transform .2s ease-in;
 }
 
+.cartao:hover .opcoesDoCartao-opcao, .cartao--focado .opcoesDoCartao-opcao {
+	opacity: 1;
+	pointer-events: auto;
+}
+
 .cartao--some {
 	opacity: 0;
 	transition: 0.5s;
